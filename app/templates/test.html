@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+
+  <a id="footprints_button">
+   <form id='footprints_form' method=post enctype=multipart/form-data>
+    <input id="footprints_input_field" name="file" type="file" onchange="this.form.submit();" hidden/>
+   </form>
+   <button href="#" target="_blank" class="btn btn-white btn-circled btn-text">
+    <i class="fas fa-camera pr-2 left" aria-hidden="true"></i> Click to upload footprints
+   </button>
+  </a>
+
+    <script>
+        // added to get upload with a button working
+        document.getElementById('footprints_button').addEventListener('click', openDialog);
+
+        function openDialog() {
+            document.getElementById('footprints_input_field').click();
+        }
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#spinner").bind("ajaxSend", function() {
+                $(this).show();
+            }).bind("ajaxStop", function() {
+                $(this).hide();
+            }).bind("ajaxError", function() {
+                $(this).hide();
+            });
+            // footprints_input_field
+            $('#footprints_button').click(function() {
+
+            });
+        });
+    </script>
+  </body>
+</html>

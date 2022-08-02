@@ -81,13 +81,16 @@
                 <div class="col justify-content-center align-items-center text-center">
                     <h3 class="section-title display-4">Recognition Results</h3>
                     <h3 class="we-found btn-text display-4">We found <strong><span style='text-transform: capitalize;'>{{labels}}!</span></strong></h3>
+                    <div>
+                      {{labels}} , {{confidences}}
+                    </div>
 
                     {% if labels == 'no emotion' %}
                     <div>We missed? See why below.</div>
                     {% else %}
                     <div class="lead"><em>with {{ confidences }} confidence.</em></div>
                     {% endif %}
-
+                    
                     <a class="mb-0" id='seefood_button'>
                         <form action="/" id='seefood_form' method=post enctype=multipart/form-data>
                             <input id="seefood_input_field" name="file" type="file" onchange="this.form.submit();" hidden/>
