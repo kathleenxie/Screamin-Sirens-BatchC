@@ -61,15 +61,15 @@
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
-  --bs-body-bg: #fff;  
+  --bs-body-bg: #fff;
 }
 
 
 
-
-
-
-
+about_us_images {
+    width: 10px;
+    height: 10px;
+}
 *,
 *::before,
 *::after {
@@ -11494,77 +11494,4 @@ p {
 
 .address strong {
   font-size: 1.2rem;
-}
-.aboutparagraph{
-    text-align:center;
-    color:white;
-    word-wrap: break-word;
-     
-}
-
-.textandparagraph{
-    text-align:center;
-    background-color:gray;
-    width:90%;
-    margin: 0 auto;
-}
-
-/* For two images per row in the about us section 
-.rightcolumn {
-    text-align: right;
-    width: 50%;
-}
-
-.leftcolumn {
-    text-align: left;
-    width: 50%;
-     
-}
-
-*/
-
-
-
-/* For three images per row in about us section */
-.leftthird {
-    text-align: left;
-    width: 33.333%;
-     
-}
-
-.middlethird {
-    text-align: center;
-    width: 33.333%;
-     
-}
-
-.rightthird {
-    text-align: right;
-    width: 33.333%;
-     
-}
-
-
-.middlethirdtextandparagraph {
-    text-align:center;
-    background-color:gray;
-    width:30%;
-    margin: 0 auto;
-}
-
-
-/* The three classes above this */
-
-
-.aboutimage{
-    width:100%;
-
-}
-
-.parentdiv {
-    display: flex;
-    flex-direction: row;
-}
-.testimg{
-    width:20px
 }

@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Business Casual - Start Bootstrap Theme</title>
+        <title>Footprint Detector</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
@@ -31,33 +31,69 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto">
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html">Home</a></li>
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="about.html">About Us</a></li>
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="products.html">How We Trained Our Model</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="https://cocalc15.ai-camp.dev/4559949a-12be-48f9-8c58-b62a9ca1e674/port/12345/">Home</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="https://cocalc15.ai-camp.dev/4559949a-12be-48f9-8c58-b62a9ca1e674/port/12345/aboutus">About Us</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="https://cocalc15.ai-camp.dev/4559949a-12be-48f9-8c58-b62a9ca1e674/port/12345/model">How We Trained Our Model</a></li>
                         
                     </ul>
                 </div>
             </div>
         </nav>
-        <section class="page-section clearfix">
-            <div class="container">
-                <div class="intro">
-                  <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{ url_for('static', filename='uploads/' + filename)}}" alt="..." />
-                    
-                        
-      
-                        
-                      
-                    </div>
-                  <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+        <section class="page-section clearfix" style= "display:center">
+     
+          <div class="intro-text left-0 text-center bg-faded p-5 rounded">
                     <h2 class="section-heading mb-4">
                             <span class="section-heading-upper">Footprint Detector</span>
                             <span class="section-heading-lower">Results</span>
                         </h2><div style='text-align:center'></div>
                         <p class="mb-3">We detected {{labels}}</p>
                       <p class="mb-3">With {{confidences}} confidence</p>
+          <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{ url_for('static', filename='uploads/' + filename)}}" width=700px
+     height=auto alt="..." />
+
+            <br><br>
+            
+            <div class="container">
+                <div class="intro">
+                    </div>
                 </div>
-              <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="#!">Upload Another Image!</a></div> 
+                          <div class="intro-button mx-auto">
+                        <a id="footprints_button">
+                       <form id='footprints_form' method=post enctype=multipart/form-data>
+                        <input id="footprints_input_field" name="file" type="file" onchange="this.form.submit();" hidden/>
+                       </form>
+                       <button href="#" target="_blank" class="btn btn-primary btn-xl">
+                        <i class="fas fa-camera pr-2 left" aria-hidden="true"></i> Upload another image!
+                       </button>
+                      </a>
+                        </div>
+                       <script>
+        // added to get upload with a button working
+        document.getElementById('footprints_button').addEventListener('click', openDialog);
+
+        function openDialog() {
+            document.getElementById('footprints_input_field').click();
+        }
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#spinner").bind("ajaxSend", function() {
+                $(this).show();
+            }).bind("ajaxStop", function() {
+                $(this).hide();
+            }).bind("ajaxError", function() {
+                $(this).hide();
+            });
+            // footprints_input_field
+            $('#footprints_button').click(function() {
+
+            });
+        });
+    </script>
+                    </div>
+            
+            
+            
             </div>
           
         </section>
@@ -70,23 +106,8 @@
                             <h2 class="section-heading mb-4">
                                 <span class="section-heading-lower">({{labels}})</span>
                             </h2>
-                            <p class="mb-0"> Blank animal is known to stay in habitats such as () and tend to eat (). This animal is (not) known to harm humans. If you see a () you should ()
- 
-<pre></pre></p>
-                        </div>
-                    </div>
-                </div>
-        </section>
-   <section class="page-section cta">
-            <div class="container">
-                        <div class="cta-inner bg-faded text-center rounded">
-                            <h2 class="section-heading mb-4">
-                                <span class="section-heading-upper">Our Mission</span>
-                                <span class="section-heading-lower">To You</span>
-                            </h2>
-                            <p class="mb-0">Our AI was made with the intent of helping differentiate between several different footprints so users can identify them. The goal of our project is to help people identify if there is a threatening animal near them. Finding the owners of these furry feet marks could save your life. It can also help find out what animal has been digging trough your trash or trampling your garden. On a hike you might find yourself asking, “What are all these pawprints I keep stepping on?”. Watch out! Those might just be bear prints!
- 
-<pre></pre></p>
+                            <p class="mb-0"> {{footprint_description}}
+
                         </div>
                     </div>
         </section>

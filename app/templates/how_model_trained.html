@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Footprint Detector </title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/plugins/fontawesome/css/all.css">
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles_footprints.css')}}" >
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles_footprints<u></u>.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header>
+            <h1 class="site-heading text-center text-faded d-none d-lg-block">
+                <span class="site-heading-upper text-primary mb-3">Footprint Detector</span>
+                <span class="site-heading-lower">An AI model to detect footprints</span>
+            </h1>
+        </header>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="index.html">Start Bootstrap</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="https://cocalc15.ai-camp.dev/4559949a-12be-48f9-8c58-b62a9ca1e674/port/12345/">Home</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="aboutus">About us</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="model">How we trained our model</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+       <section class="page-section cta">
+            <div class="container">
+                        <div class="cta-inner bg-faded text-center rounded">
+                            <h2 class="section-heading mb-4">
+                                <span class="section-heading-upper">How we Trained Our Model</span>
+                                
+                              <br>
+                              <span class="section-heading-lower">Week One<em></em></span>
+                            
+                              </h2>
+                            <p class="mb-0">We set up our AI to differentiate between and identify prints that belong to several animals. We trained our detector to track down human footprints as well. In order to do this we first decided what animals we wanted to detect. After the team made a vote we used Serp.api to scrape the internet for images to use for the data. To annotate the images, we had to add them to a website called Roboflow so that we could differentiate the prints from the background while naming them. <p
+                            
+                          <h2 class="section-heading mb-4">
+                             <span class="section-heading-lower">Week Two<em></em></span>
+                          </h2>
+                         
+                             <p class="mb-0"> After we did this we got to do the coding for actually training the program. We soon got this code working in Google Colabs. After waiting for the product to train, the code would give us a confusion matrix telling us how well the detector works. A confusion matrix is a table that shows us the results that the detector gave us compared to the results that is should have gotten. The team went through 5 versions of this training to get to final product. This means that after we got the confusion matrix each time, we added data and used different augmentations to better train and reinforce the program. <p
+                                 
+                               <h2 class="section-heading mb-4" >
+                                <span class="section-heading-lower">Week Three<em></em></span>
+                               </h2>
+         <p class="mb-0">In our final week, we created a website using a template from Bootstrap. This website allows users to easily upload footprint pictures for our AI to identify. This website will be available to the public for free, allowing anyone to use it regardless of their position. <p
+                          
+ 
+<pre></pre></p>
+                        </div>
+                    </div>
+        </section>
+        <section class="page-section about-heading">
+            <div class="container">
+               <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="{{ url_for('static', filename='images/confusion_matrix.png' )}}" alt = "confusion matrix 1"/>
+                <div class="about-heading-content">
+                    <div class="row">
+                        <div class="col-xl-9 col-lg-10 mx-auto">
+                            <div class="bg-faded rounded p-5">
+                                <h2 class="section-heading mb-4">
+                                    
+                                    <span class="section-heading-lower"> first Confusion matrix</span>
+                                </h2>
+                                <p>This is our first confusion matrix. As you can see, in the first matrix there is a lot of confusion (discoloration outside of the diagonal line) between the different footprints. The most difficulties the program had were between horse, cat, and dog prints. In order to fix this, we added more data and different augmentations of the data. Then, we ran it through again.</p>
+                               
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+         
+        </section>
+   <section class="page-section about-heading">
+            <div class="container">
+              <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="{{ url_for('static', filename='images/confusion_matrix5.png' )}}" alt = "confusion matrix 5"/>       
+                <div class="about-heading-content">
+                    <div class="row">
+                        <div class="col-xl-9 col-lg-10 mx-auto">
+                            <div class="bg-faded rounded p-5">
+                                <h2 class="section-heading mb-4">
+                                    
+                                    <span class="section-heading-lower"> final confusion matrix</span>
+                                </h2>
+                                <p>After going though the process of adding, changing, and running the data 4 more times, we became satisfied with the results of version 5. In this confusion matrix, you can see that there is much less discoloration and the diagonal line is very prominent. This means that the product is ready to be used and will give accurate results. </p>
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+         
+        </section>
+        <footer class="footer text-faded text-center py-5">
+            <div class="container"><p class="m-0 small">Copyright &copy; Screamin' Sirens</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
