@@ -48,7 +48,7 @@
                               <span class="section-heading-lower">Week One<em></em></span>
                             
                               </h2>
-                            <p class="mb-0">We set up our AI to differentiate between and identify prints that belong to several animals. We trained our detector to track down human footprints as well. In order to do this we first decided what animals we wanted to detect. After the team made a vote we used Serp.api to scrape the internet for images to use for the data. To annotate the images, we had to add them to a website called Roboflow so that we could differentiate the prints from the background while naming them. <p
+                            <p class="mb-0">We set up our AI to differentiate between and identify prints that belong to several animals. We trained our detector to track down human footprints as well. In order to do this we first decided what animals we wanted to detect. After the team made a vote we used SerpAPI to scrape the internet for images to use for the data. To annotate the images, we had to add them to a website called Roboflow so that we could differentiate the prints from the background while naming them. <p
                             
                           <h2 class="section-heading mb-4">
                              <span class="section-heading-lower">Week Two<em></em></span>
@@ -56,13 +56,26 @@
                          
                              <p class="mb-0"> After we did this we got to do the coding for actually training the program. We soon got this code working in Google Colabs. After waiting for the product to train, the code would give us a confusion matrix telling us how well the detector works. A confusion matrix is a table that shows us the results that the detector gave us compared to the results that is should have gotten. The team went through 5 versions of this training to get to final product. This means that after we got the confusion matrix each time, we added data and used different augmentations to better train and reinforce the program. <p
                                  
-                               <h2 class="section-heading mb-4" >
+                               <h2 class="section-heading mb-4">
                                 <span class="section-heading-lower">Week Three<em></em></span>
                                </h2>
-         <p class="mb-0">In our final week, we created a website using a template from Bootstrap. This website allows users to easily upload footprint pictures for our AI to identify. This website will be available to the public for free, allowing anyone to use it regardless of their position. <p
-                          
- 
-<pre></pre></p>
+         <p class="mb-0">In our final week, we created a website using a template from Bootstrap. This website allows users to easily upload footprint pictures for our AI to identify. This website will be available to the public for free, allowing anyone to use it regardless of their position. </p>
+                               <h2 class="section-heading mb-4" >
+                                <span class="section-heading-lower">Challenges<em></em></span>
+                               </h2>
+                               <p>
+                               One of the main obstacles we faced throughout this project was lack of high quality data. To overcome this issue, we utilized several different augmentations and focused, more specific image searching. Another issue we faced was that many animal footprints were very similar. This made it very hard for the model to differentiate between certain animals. To overcome this challenge, we decided to go over all our data and clean it, so that the only data we have for the model is clean data that distinctly separates each footprint.  
+                               </p>
+      
+                               <h2 class="section-heading mb-4" >
+                                <span class="section-heading-lower">Future Improvements<em></em></span>
+                               </h2>  
+                               <p>
+                                 In the future, we could improve our model by increasing its capability to identify even more footprints. This would be a similar process to what we did previously by training a data set of new animals. Another improvement could be improving our confidence in the identification of the footprint. This would involve us gathering more data for each animal and training our model to identify them.
+                                
+         </p>
+
+<pre></pre><p>
                         </div>
                     </div>
         </section>
@@ -99,7 +112,7 @@
                                     
                                     <span class="section-heading-lower"> final confusion matrix</span>
                                 </h2>
-                                <p>After going though the process of adding, changing, and running the data 4 more times, we became satisfied with the results of version 5. In this confusion matrix, you can see that there is much less discoloration and the diagonal line is very prominent. This means that the product is ready to be used and will give accurate results. </p>
+                                <p>After going through the process of adding, changing, and running the data 4 more times, we became satisfied with the results of version 5. In this confusion matrix, you can see that there is much less discoloration and the diagonal line is very prominent. This means that the product is ready to be used and will give accurate results. </p>
                               
                             </div>
                         </div>
